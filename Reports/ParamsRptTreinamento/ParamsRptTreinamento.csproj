@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{736D353B-479E-4B39-BE47-76764989555C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Procwork.Software.SATI.COM.Common.ParamsRptTreinamento</RootNamespace>
+    <AssemblyName>Procwork.Software.SATI.COM.Common.ParamsRptTreinamento</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b2a51c90a9f83bcb" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b2a51c90a9f83bcb" />
+    <Reference Include="Procwork.Software.Basic.Common.UC_Components">
+      <HintPath>..\..\..\..\PW.Basic\Procwork.Software.Basic.Common.UC_Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Procwork.Software.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc44a5a3763e2b22, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Procwork.Software.Framework\v4.0_4.0.0.0__cc44a5a3763e2b22\Procwork.Software.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Procwork.Software.Framework.Windows.Classes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc44a5a3763e2b22, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Procwork.Software.Framework.Windows.Classes\v4.0_4.0.0.0__cc44a5a3763e2b22\Procwork.Software.Framework.Windows.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="Procwork.Software.Framework.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc44a5a3763e2b22, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Procwork.Software.Framework.Windows.Forms\v4.0_4.0.0.0__cc44a5a3763e2b22\Procwork.Software.Framework.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_RptTreinamento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_RptTreinamento.Designer.cs">
+      <DependentUpon>UC_RptTreinamento.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UC_RptTreinamento.resx">
+      <DependentUpon>UC_RptTreinamento.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
